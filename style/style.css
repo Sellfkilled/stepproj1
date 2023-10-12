@@ -289,7 +289,8 @@
     align-items: center;
     justify-content: center;
     border-left: 0;
-    background-color: #F8FCFE;;
+    background-color: #F8FCFE;
+    cursor: pointer;
 }
 
 .services-content-nav ul li:hover{
@@ -314,10 +315,35 @@
 }
 
 .services-content-card{
-    display: flex;
     width: 1160px;
     margin: 0 auto;
     margin-top: 27px;
+    align-items: center;
+}
+
+.services-nav-wrapper li.active-services{
+    background-color: #18CFAB;
+    position: relative;
+}
+
+.services-nav-wrapper li.active-services a{
+    color: #fff;
+}
+
+.services-nav-wrapper li.active-services::after{
+    content: "";
+    position: absolute;
+    bottom: -9px; /* Змінено з top на bottom */
+    left: 50%;
+    border-width: 10px 10px 0; /* Змінено порядок значень */
+    border-style: solid;
+    border-color: #18CFAB transparent transparent transparent; /* Змінено порядок кольорів */
+    transform: translateX(-50%);
+}
+
+.services-content-card img{
+    width: 192px;
+    height: 139px;
 }
 
 .services-paragraph{
@@ -326,6 +352,7 @@
     font-size: 13.5px;
     font-weight: 300;
     line-height: 24px; 
+    width: 952px;
 }
 
 /* purchase block */
@@ -443,6 +470,7 @@
     height: 618px;
     margin: 0 auto;
     margin-top: 70px;
+    width: 1160px;
 }
 
 .our-work-img-special{
@@ -652,10 +680,14 @@
 }
 
 .about-card-wrapper{
-    width: 166px;
+    width: 180px;
     margin: 0 auto;
     margin-top: 37px;
     text-align: center;
+}
+
+.about-card-info{
+    display: none;
 }
 
 .about-card-name{
@@ -706,11 +738,40 @@
     background-color: #18CFAB;
 }
 
+.gallery-img-item-wrapper{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
 .about-gallery-wrapper img{
     width: 60px;
     height: 59px;
     border: 5px solid #1fdab534;
     border-radius: 50%;
+}
+
+.selected-image-container {
+    text-align: center;
+}
+
+.selected-image-container img {
+    width: 143px;
+    height: 142px;
+    border: 10px solid #1fdab534;
+    border-radius: 50%;
+    transition: height 0.3s ease;
+}
+
+.selected-image-container img {
+    transition: height 0.3s ease;
+}
+
+.gallery-img-item.active img{
+    width: 60px;
+    border: 5px solid #1fdab534;
+    border-radius: 50%;
+    transform: translateY(-10px);
 }
 
 .footer-wrapper{
