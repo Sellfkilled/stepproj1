@@ -551,6 +551,11 @@
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 68px;
+    list-style-type: none;
+}
+
+.breaking-news-card-wrapper-flex li a{
+    text-decoration: none;
 }
 
 .breaking-news-card-wrapper{
